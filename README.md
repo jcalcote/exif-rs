@@ -11,11 +11,11 @@ filesystem discovery or service dependencies.
 
 ## Use
 
-The initial version is available from Git; it has not been published to crates.io:
+Add the crate from crates.io:
 
 ```toml
 [dependencies]
-exif-inspect = { git = "https://github.com/jcalcote/exif-rs", tag = "v0.1.0" }
+exif-inspect = "0.1.0"
 ```
 
 ```rust,no_run
