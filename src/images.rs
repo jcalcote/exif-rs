@@ -277,7 +277,7 @@ pub(crate) fn jpeg(
                     c,
                 )?;
             }
-            0xe1..=0xef | 0xc4 | 0xdc => c.partial = true,
+            0xe0..=0xef | 0xc4 | 0xdc => c.partial = true,
             _ => {}
         }
     }

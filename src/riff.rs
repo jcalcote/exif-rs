@@ -79,13 +79,14 @@ pub(crate) fn wav(p: Prefix<'_>, w: &mut Writer<'_>, c: &mut Control<'_>) -> Res
                         b"ICOP" => "Copyright",
                         b"ISFT" => "Software",
                         _ => {
+                            c.partial = true;
                             return Ok(());
                         }
                     };
                     let text = input::text(body, 0, body.len(), false, true, c)?;
                     w.text("WAV", name, &text, c)?;
                 }
-                _ => {}
+                _ => c.partial = true,
             }
             Ok(())
         },
@@ -139,6 +140,8 @@ pub(crate) fn avi(p: Prefix<'_>, w: &mut Writer<'_>, c: &mut Control<'_>) -> Res
                 } else if typ == *b"auds" && !audio {
                     audio = true;
                     w.number("AVI", "Samples Per Second", ratio, c)?;
+                } else {
+                    c.partial = true;
                 }
             }
             b"IDIT" => {
@@ -154,7 +157,9 @@ pub(crate) fn avi(p: Prefix<'_>, w: &mut Writer<'_>, c: &mut Control<'_>) -> Res
                     c,
                 )?;
             }
-            _ => {}
+            // strf, INFO entries and other unimplemented metadata cannot be
+            // presented as complete merely because the main header decoded.
+            _ => c.partial = true,
         }
         Ok(())
     })
@@ -205,7 +210,12 @@ pub(crate) fn webp(
                 c.partial = true;
                 return Ok(());
             }
-            _ => return Ok(()),
+            // ALPH contains coded alpha samples, not extracted metadata.
+            b"ALPH" => return Ok(()),
+            _ => {
+                c.partial = true;
+                return Ok(());
+            }
         };
         w.number("WebP", "Image Width", width, c)?;
         w.number("WebP", "Image Height", height, c)?;
@@ -242,13 +252,19 @@ fn walk(
         let next = start.checked_add(len).ok_or(Failure::Malformed)?;
         let available = end.saturating_sub(start).min(len);
         let body = p.slice(start, available)?;
-        if id == *b"LIST" {
+        if matches!(&id, b"JUNK" | b"PAD ") {
+            // These RIFF chunks are explicitly padding, including in LISTs.
+        } else if id == *b"LIST" {
             if len < 4 {
                 return Err(Failure::Malformed);
             }
             let typ = body.array::<4>(0, c)?;
             if matches!(&typ, b"INFO" | b"hdrl" | b"strl") {
                 walk(p, start + 4, next.min(end), depth + 1, &typ, c, visit)?;
+            } else if typ != *b"movi" || list != b"AVI " {
+                // Only the AVI root's movi list is known sample payload. Other
+                // unhandled list types may contain metadata (e.g. WAVE adtl).
+                c.partial = true;
             }
         } else {
             visit(&id, body, len, list, c)?;
