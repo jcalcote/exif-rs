@@ -1,0 +1,25 @@
+[package]
+name = "exif-inspect"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+authors = ["John Calcote"]
+description = "Bounded metadata extraction from images and media with caller-owned storage"
+license = "Apache-2.0"
+repository = "https://github.com/jcalcote/exif-rs"
+homepage = "https://github.com/jcalcote/exif-rs"
+documentation = "https://docs.rs/exif-inspect"
+readme = "README.md"
+keywords = ["exif", "metadata", "image", "iptc", "icc"]
+categories = ["multimedia::images"]
+include = ["/src/**", "/tests/**", "/examples/**", "/resources/**", "/Cargo.toml", "/README.md", "/LICENSE", "/NOTICE", "/CHANGELOG.md"]
+
+[lints.rust]
+unsafe_op_in_unsafe_fn = "deny"
+
+[lints.clippy]
+all = "warn"
+
+[package.metadata.docs.rs]
+all-features = true
+rustdoc-args = ["--cfg", "docsrs"]

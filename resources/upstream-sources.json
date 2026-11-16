@@ -1,0 +1,265 @@
+{
+  "artifact": "com.drewnoakes:metadata-extractor:2.19.0",
+  "license_source": "https://raw.githubusercontent.com/drewnoakes/metadata-extractor/2.19.0/LICENSE",
+  "license_sha256": "8bbe16f57f80aaea9ad60fd386ebdbbf0481cdb016723bad7ff2cd83b9501e79",
+  "adapted_references": [
+    {
+      "source": "com/drew/imaging/FileType.java",
+      "sha256": "5554fc88f48c61a690eca57d6a447e68c0bf7ea84e1890a9dc8a1814b155765d"
+    },
+    {
+      "source": "com/drew/imaging/tiff/TiffReader.java",
+      "sha256": "49e28ce05527ce9f043426a92cd76117479d9a61de9ed46212f5d802bfbfa340"
+    },
+    {
+      "source": "com/drew/imaging/riff/RiffReader.java",
+      "sha256": "8f4e36e625cdcc09b47f7f5aac3baaee23f6a2b81b154625672e5c33243dec94"
+    },
+    {
+      "source": "com/drew/metadata/exif/ExifDirectoryBase.java",
+      "sha256": "4a51fe7a50c94b532cea367384d5c8291574e68c306dd105dbbf37b37eddbe4e"
+    },
+    {
+      "source": "com/drew/metadata/exif/ExifDescriptorBase.java",
+      "sha256": "0021c777efd1721d610b9260933c0170b0e64fe9f3b612b89c510eca7a0669ff"
+    },
+    {
+      "source": "com/drew/metadata/exif/ExifTiffHandler.java",
+      "sha256": "11b49e58b6a13c3137c4a30804aa52061f36dacaf628773f8c29755a54d51092"
+    },
+    {
+      "source": "com/drew/metadata/exif/GpsDirectory.java",
+      "sha256": "4da3a5fbf0ac815a07d4d0a00c9eff36aaa0380089142bdeb200ebe0826f2730"
+    },
+    {
+      "source": "com/drew/metadata/exif/GpsDescriptor.java",
+      "sha256": "7bb8f55c21026274ebe928ba4b46346c0dfc3bb43a7b82596318ecf36ac56e1e"
+    },
+    {
+      "source": "com/drew/metadata/TagDescriptor.java",
+      "sha256": "6f61abbf35d49f9abb890c70702a0db117f022b2e8d04cc68d4ad18867b0d473"
+    },
+    {
+      "source": "com/drew/metadata/jpeg/JpegReader.java",
+      "sha256": "162e8a390075f9d74407b27abcee77235fc2a5407d3df6f6589121743969243a"
+    },
+    {
+      "source": "com/drew/metadata/jpeg/JpegDescriptor.java",
+      "sha256": "e8e9017e9100018c0f80edabe5abdd0fe8e2fd2695bdf01b9251876c28f0910d"
+    },
+    {
+      "source": "com/drew/metadata/jfif/JfifReader.java",
+      "sha256": "d673380272ead2064cfa782caa9e9193ed2e32c2d9f7344a3f1f79d57ba80790"
+    },
+    {
+      "source": "com/drew/metadata/jfif/JfifDescriptor.java",
+      "sha256": "fa021d29a430771d067c48ef8a4cb1019ecc70db3323832cb2f9975bd5bf1cef"
+    },
+    {
+      "source": "com/drew/imaging/png/PngMetadataReader.java",
+      "sha256": "65907c330072dbccbace4eccc48d768cb5db16e41d8cd2fa95a320ad60291ec9"
+    },
+    {
+      "source": "com/drew/metadata/png/PngDirectory.java",
+      "sha256": "16c7ab56246952697444afa35a841d733c735474e44631a44d9691e91e2678ae"
+    },
+    {
+      "source": "com/drew/metadata/png/PngDescriptor.java",
+      "sha256": "5ca462eda0225c390135240f135dcf5b1accf901b75fe9f4516558deafc04aa7"
+    },
+    {
+      "source": "com/drew/metadata/bmp/BmpReader.java",
+      "sha256": "cf528944637f965744c6dd6ddbf6013f3a9058643ab791f26f58943ef88148a2"
+    },
+    {
+      "source": "com/drew/metadata/bmp/BmpHeaderDirectory.java",
+      "sha256": "1bf640f6fc19755276bc61022765cd0c9c0fd9aab92361d741f870afcb4fc446"
+    },
+    {
+      "source": "com/drew/metadata/gif/GifReader.java",
+      "sha256": "af5e973409925e07cacb7bbd2f8c07d3b26fcf907a60897e07ecfebebe79f1ac"
+    },
+    {
+      "source": "com/drew/metadata/gif/GifHeaderDirectory.java",
+      "sha256": "354e91ee039a30bbe6b7540564e7ad634292c4eacca9e151e6ea3b9d712f8df6"
+    },
+    {
+      "source": "com/drew/metadata/ico/IcoReader.java",
+      "sha256": "78a5fe2aab9908dee69b1358eba0b52ec43f3953d9475882331eae8702a7733e"
+    },
+    {
+      "source": "com/drew/metadata/ico/IcoDescriptor.java",
+      "sha256": "34c4205778cb829b1ab2383a3f7283ad98e0b00923998bc511227295d1563efc"
+    },
+    {
+      "source": "com/drew/metadata/pcx/PcxReader.java",
+      "sha256": "b89fa3fe661e65b3c9766218b10dd90dec0e258322e867820e96593a92b01321"
+    },
+    {
+      "source": "com/drew/metadata/pcx/PcxDescriptor.java",
+      "sha256": "e70dbc8422d6850e88f939e172182eeb8e467431ecd6ff3692771199c91721b7"
+    },
+    {
+      "source": "com/drew/metadata/webp/WebpRiffHandler.java",
+      "sha256": "f56f5cddf97121e0723f3e4be7c2ce571eeb5b80a0c33933d6a5b97b210eb62d"
+    },
+    {
+      "source": "com/drew/metadata/avi/AviRiffHandler.java",
+      "sha256": "b670b6c704ef446386ceb77b36322435a76bd76ea948c30d57d2544aa52b6f17"
+    },
+    {
+      "source": "com/drew/metadata/wav/WavRiffHandler.java",
+      "sha256": "c0a76cc279b9739c901bc5347af1454f9677a1c64c9998c277cc8309d605fde8"
+    },
+    {
+      "source": "com/drew/metadata/wav/WavDirectory.java",
+      "sha256": "8b012279d5f1091c0e3ba3c0817ccd0090666a1060ff95788eee070b86600b50"
+    },
+    {
+      "source": "com/drew/metadata/mp3/Mp3Reader.java",
+      "sha256": "5e2017da1bf769f45be7ed58c26a45cdb8edf20d58bbef605ad8f2fb1b117939"
+    },
+    {
+      "source": "com/drew/metadata/mp3/Mp3Directory.java",
+      "sha256": "c9db7828aa09e47c9d76d167477f886e49a647d45a8090daa12af129fd0b2eeb"
+    },
+    {
+      "source": "com/drew/imaging/FileTypeDetector.java",
+      "sha256": "d5654bb2dc2717e2069ffee5370acb753a643ac76df28d0348bef04cbf805338"
+    },
+    {
+      "source": "com/drew/imaging/raf/RafMetadataReader.java",
+      "sha256": "14b39df306bdf8a6f6622d69ca8a02a93789376b6b4ecf11bad6b1f0fcd1a9cd"
+    },
+    {
+      "source": "com/drew/metadata/photoshop/PsdReader.java",
+      "sha256": "0c38890df98bd87de0a8b3c28db50031cb6482c83350075b9dec19adbcc7a1a1"
+    },
+    {
+      "source": "com/drew/metadata/photoshop/PsdHeaderDirectory.java",
+      "sha256": "93fa2440da9249f2d72432243c80a245caf4aaac531cba87d186f927d1dc681f"
+    },
+    {
+      "source": "com/drew/metadata/photoshop/PsdHeaderDescriptor.java",
+      "sha256": "6f957e2ec934a6918898bcc36f98f81a1354eb08e38586dc89d3cd19ad983521"
+    },
+    {
+      "source": "com/drew/metadata/photoshop/PhotoshopReader.java",
+      "sha256": "9c6790422ba1aa481bb40de94ea6132d1bedb02df47d7a931625dc5165304b70"
+    },
+    {
+      "source": "com/drew/metadata/exif/PanasonicRawIFD0Directory.java",
+      "sha256": "bcddfff4c796b8e5e8fb0722233d187ea50f4f44f3a8319259e94b31d414b334"
+    },
+    {
+      "source": "com/drew/metadata/exif/PanasonicRawIFD0Descriptor.java",
+      "sha256": "4346f68661032a19ab6104f9135ae9faba5f296fcbf75731136263adc17fdc65"
+    },
+    {
+      "source": "com/drew/metadata/eps/EpsReader.java",
+      "sha256": "8ccd1c245b4184c51f2b15c7e84d0a271fa6d409a8d9fc8bcac907552c0122e7"
+    },
+    {
+      "source": "com/drew/metadata/eps/EpsDirectory.java",
+      "sha256": "19a709e6760b40791bb6fbc28c022bbf3608fc2295d956823208cc7fe75170b8"
+    },
+    {
+      "source": "com/drew/metadata/eps/EpsDescriptor.java",
+      "sha256": "eb9cf571bd69f77b39b8952f253a4d52fc1b780c47147d2d83c2402508ed1c83"
+    },
+    {
+      "source": "com/drew/metadata/mp4/Mp4BoxHandler.java",
+      "sha256": "f170dab340f064f1f535bef50d90930b81805d31199756fdd1a62eaabdf5c464"
+    },
+    {
+      "source": "com/drew/metadata/mp4/Mp4Descriptor.java",
+      "sha256": "a29c05e2a87164361e018f2c09647319d335ec0ccf602bf3d0afe7bb9e06181c"
+    },
+    {
+      "source": "com/drew/metadata/mp4/Mp4Dictionary.java",
+      "sha256": "ea8e3fd2923c19922feceeb1a0e1151c80d79153a777ba692fd61f286d0f119e"
+    },
+    {
+      "source": "com/drew/metadata/mov/atoms/MovieHeaderAtom.java",
+      "sha256": "420ab4add5be976a6337833e645f544ffb8ab4d48258c7ffc0dda8ec659954bf"
+    },
+    {
+      "source": "com/drew/metadata/mov/atoms/FileTypeCompatibilityAtom.java",
+      "sha256": "a11e60d0851578bc2e3e0daa627273972183153e7119ebafe013666d78431d5d"
+    },
+    {
+      "source": "com/drew/metadata/mov/QuickTimeDescriptor.java",
+      "sha256": "fb6d5e3c08a700af0b083160bf5467a2872af65dc8ee971f299a1c50fcaf5e8b"
+    },
+    {
+      "source": "com/drew/metadata/mov/QuickTimeDictionary.java",
+      "sha256": "9cb7611182699938d54c3fbb3215e7f042ecc858bb6793a7cc3a63e03293f45c"
+    },
+    {
+      "source": "com/drew/metadata/heif/HeifBoxHandler.java",
+      "sha256": "b1391472ea4ff3cd44ca9649c34f74cbb336d19cf027c93b607d9722b63076d4"
+    },
+    {
+      "source": "com/drew/metadata/heif/HeifPictureHandler.java",
+      "sha256": "0da567836fde168eb11b51a5b827c13abfc8629a12533a0f6f9bf16627a35b21"
+    },
+    {
+      "source": "com/drew/metadata/heif/HeifDescriptor.java",
+      "sha256": "09ad1f038827812d5234597230fe4fc0ddeabf549a1c4a17dd798567aa949753"
+    },
+    {
+      "source": "com/drew/metadata/heif/boxes/FileTypeBox.java",
+      "sha256": "cb69eabd4d88aefb26dc5a8af2d5c745c3c86ae3e2294d857ffd1b020a61ca47"
+    },
+    {
+      "source": "com/drew/metadata/heif/boxes/ImageSpatialExtentsProperty.java",
+      "sha256": "6313eea0aece3407593d84bf095b118ef2b63d25887bb65065b11fb8f1b88ea9"
+    },
+    {
+      "source": "com/drew/metadata/heif/boxes/ImageRotationBox.java",
+      "sha256": "cfb0a38d938afe8e837b7614e78d7b6b4b98a4c3989889a81487a769aa253756"
+    },
+    {
+      "source": "com/drew/metadata/heif/boxes/PixelInformationBox.java",
+      "sha256": "3305bf9d234fe9db2a98aa2ce97c51fd042a76209bee0c3350ab62af09731bcb"
+    },
+    {
+      "source": "com/drew/metadata/iptc/IptcReader.java",
+      "sha256": "85283576588b9e5ed5934bede17abfe9487632243ad8717e12dbf00a18e7686b"
+    },
+    {
+      "source": "com/drew/metadata/iptc/IptcDirectory.java",
+      "sha256": "fa0075344fa2d9ce698e98c4637a56e6677e6b7958247016731a29505ae1b5c8"
+    },
+    {
+      "source": "com/drew/metadata/iptc/IptcDescriptor.java",
+      "sha256": "0f9e53b549ed4ed003073c7a1c179d4857fef2b5b7f497f7aa882eeff9e6240a"
+    },
+    {
+      "source": "com/drew/metadata/iptc/Iso2022Converter.java",
+      "sha256": "a47640e01de5ef9a1a95b019a556dab5affe4b2766222f15d4b7bf2ae18e5faf"
+    },
+    {
+      "source": "com/drew/metadata/icc/IccDirectory.java",
+      "sha256": "076bce4167293c922aa3ab44667ce7666f0c9bc51ae5e83426cbd4aef10fa79b"
+    },
+    {
+      "source": "com/drew/metadata/icc/IccReader.java",
+      "sha256": "5c6cc3131d356b2a32cb569e6b3351c487b5fbdf89e16bb7e74e22b2ebff76ab"
+    },
+    {
+      "source": "com/drew/metadata/icc/IccDescriptor.java",
+      "sha256": "8935c1fc28771fe8daad33f9520de5a2fdca3e35928bda41c09fb8333fdf7d7a"
+    }
+  ],
+  "reference_artifacts": [
+    {
+      "coordinate": "com.drewnoakes:metadata-extractor:2.19.0",
+      "sha256": "e51bb454ed08ea2bfcc3ad147d088ad1aa73a999e0072563f8ae50021a2fcadb"
+    },
+    {
+      "coordinate": "com.adobe.xmp:xmpcore:6.1.11",
+      "sha256": "8f7033c579b99fa0d9d6ddcb9448875b5e4b577c350002278ce46997d678b737"
+    }
+  ]
+}
